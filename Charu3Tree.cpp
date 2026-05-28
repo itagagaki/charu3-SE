@@ -2225,15 +2225,15 @@ BOOL CCharu3Tree::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
     switch (theApp.m_ini.m_nWheelBehavior) {
     case 0: // Scroll
         SendMessage(WM_VSCROLL, zDelta < 0 ? SB_LINEDOWN : SB_LINEUP, 0);
-        break;
+        return TRUE;
     case 1: // Change selection
         SendMessage(WM_KEYDOWN, zDelta < 0 ? VK_DOWN : VK_UP, 0);
-        break;
+        return TRUE;
     case 2:  // Nothing
     default:
-        break;
+        // return CTreeCtrl::OnMouseWheel(nFlags, zDelta, pt);
+        return TRUE;
     }
-    return CTreeCtrl::OnMouseWheel(nFlags, zDelta, pt);
 }
 
 void CCharu3Tree::OnItemexpanded(NMHDR* pNMHDR, LRESULT* pResult)
