@@ -156,6 +156,7 @@ BEGIN_MESSAGE_MAP(CCharu3Tree, CTreeCtrl)
     ON_WM_MOUSEWHEEL()
     ON_NOTIFY_REFLECT(TVN_ITEMEXPANDED, OnItemexpanded)
     ON_WM_WINDOWPOSCHANGING()
+    ON_WM_NCCALCSIZE()
     //}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -2187,6 +2188,17 @@ void CCharu3Tree::OnWindowPosChanging(WINDOWPOS FAR* lpwndpos)
     if (lpwndpos) {
         CTreeCtrl::OnWindowPosChanging(lpwndpos);
     }
+}
+
+void CCharu3Tree::OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp)
+{
+    if (!theApp.m_ini.m_bScrollbarVertical) {
+        ModifyStyle(WS_VSCROLL, 0, SWP_NOREDRAW);
+    }
+    if (!theApp.m_ini.m_bScrollbarHorizontal) {
+        ModifyStyle(WS_HSCROLL, 0, SWP_NOREDRAW);
+    }
+    CTreeCtrl::OnNcCalcSize(bCalcValidRects, lpncsp);
 }
 
 //---------------------------------------------------
