@@ -286,6 +286,7 @@ protected:
     afx_msg void OnSelchanged(NMHDR* pNMHDR, LRESULT* pResult);
     afx_msg BOOL OnMouseWheel(UINT nFlags, short zDelta, CPoint pt);
     afx_msg void OnItemexpanded(NMHDR* pNMHDR, LRESULT* pResult);
+    afx_msg void OnNcCalcSize(BOOL bCalcValidRects, NCCALCSIZE_PARAMS* lpncsp);
     //}}AFX_MSG
 
     DECLARE_MESSAGE_MAP()
