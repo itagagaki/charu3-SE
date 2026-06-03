@@ -826,8 +826,8 @@ IDI_STOP256             ICON                    "res\\c2p256_16_stop.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,10,0,0
- PRODUCTVERSION 3,10,0,0
+ FILEVERSION 3,10,1,0
+ PRODUCTVERSION 3,10,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -845,12 +845,12 @@ BEGIN
             VALUE "Comments", "Text input assistant"
             VALUE "CompanyName", "C+ Factory / Itagaki Fumihiko"
             VALUE "FileDescription", "Charu3 Successor Edition"
-            VALUE "FileVersion", "3.10.0.0"
+            VALUE "FileVersion", "3.10.1.0"
             VALUE "InternalName", "Charu3 SE"
-            VALUE "LegalCopyright", "Copyright (C) 1998-2003 matsumoto keizi, 2021-2024 Itagaki Fumihiko"
+            VALUE "LegalCopyright", "Copyright (C) 1998-2003 matsumoto keizi, 2021-2026 Itagaki Fumihiko"
             VALUE "OriginalFilename", "Charu3.EXE"
             VALUE "ProductName", "Charu3 SE"
-            VALUE "ProductVersion", "3.10.0.0 + WIP"
+            VALUE "ProductVersion", "3.10.1.0"
         END
     END
     BLOCK "VarFileInfo"
